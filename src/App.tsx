@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ToastProvider } from './components/ui';
 import { LandingPage } from './pages/LandingPage';
 import { RoleSelection } from './pages/RoleSelection';
@@ -21,7 +21,7 @@ import {
 function App() {
   return (
     <ToastProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/launch" element={<RoleSelection />} />
@@ -67,7 +67,7 @@ function App() {
 
           <Route path="*" element={<LandingPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ToastProvider>
   );
 }
